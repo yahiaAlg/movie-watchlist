@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% from 'macros/render_field_template.jinja2' import render_field %}
+{% block title %}Edit Movie - Movie Watchlist{% endblock %}
+
+{% block content %}
+
+<form method="post" action="{{ url_for('pages.edit_movie', movie_id=movie_id ) }}">
+    {{ form.hidden_tag() }}
+    {{ render_field(form.title, "film", required=True) }}
+    {{ render_field(form.director, "user", required=True) }}
+    {{ render_field(form.year, "calendar-alt", required=True) }}
+    {{ render_field(form.description, "align-left", placeholder="Optional") }}
+    {{ render_field( form.tags, "tags", placeholder="Optional", value=form.tags.data | join(",") if form.tags.data != [] else ' ') }}
+    {{ render_field(form.casts, "users", placeholder="Optional", value=form.casts.data | join(",") if form.casts.data != [] else ' ') }}
+    {{ render_field(form.series, "video", placeholder="Optional", value=form.series.data | join(",") if form.series.data != [] else ' ') }}
+    {{ render_field(form.rating, "star", placeholder="Optional") }}
+    {{ render_field(form.video_link, "link", placeholder="Optional") }}
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+{% endblock %}

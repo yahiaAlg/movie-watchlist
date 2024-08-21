@@ -1,0 +1,25 @@
+{% macro render_field(field, icon, required=False, placeholder='', value='') %}
+    <div class="mb-3">
+        {{ field.label(class="form-label") }}
+        <div class="input-group{% if field.errors %} has-validation{% endif %}">
+            <span class="input-group-text">
+                <i class="fas fa-{{ icon }}"></i>
+            </span>
+            {% if value %}
+                {{ field(class="form-control" + (" is-invalid" if field.errors else ""), placeholder=placeholder, value=value) }}
+            {% else %}
+                {{ field(class="form-control" + (" is-invalid" if field.errors else ""), placeholder=placeholder) }}
+            {% endif %}
+            {% if field.errors %}
+                <div class="invalid-feedback">
+                    {% for error in field.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        {% if required %}
+            <small class="text-muted">Required</small>
+        {% endif %}
+    </div>
+{% endmacro %}

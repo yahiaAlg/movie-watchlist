@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block title %}{{movie.title}} - Movie Details{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-4">{{ movie.title }}</h1>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <span class="badge bg-primary fs-6">
+                            <i class="fas fa-calendar-alt me-2"></i>{{ movie.year }}
+                        </span>
+                        <span class="badge bg-success fs-6">
+                            <i class="fas fa-star me-2"></i>{{ movie.rating|round(1) }}
+                        </span>
+                    </div>
+
+                    <p class="lead">
+                        <i class="fas fa-film me-2"></i>
+                        <strong>Director:</strong> {{ movie.director }}
+                    </p>
+
+                    <p class="card-text">
+                        <i class="fas fa-align-left me-2"></i>
+                        <strong>Description:</strong> {{ movie.description }}
+                    </p>
+
+                    {% if movie.tags %}
+                    <div class="mb-3">
+                        <i class="fas fa-tags me-2"></i>
+                        <strong>Tags:</strong>
+                        {% for tag in movie.tags %}
+                        <span class="badge bg-secondary me-1">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    {% if movie.casts %}
+                    <div class="mb-3">
+                        <i class="fas fa-users me-2"></i>
+                        <strong>Cast:</strong>
+                        {% for cast in movie.casts %}
+                        <span class="badge bg-info text-dark me-1">{{ cast }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    {% if movie.series %}
+                    <div class="mb-3">
+                        <i class="fas fa-tv me-2"></i>
+                        <strong>Series:</strong>
+                        {% for series in movie.series %}
+                        <span class="badge bg-warning text-dark me-1">{{ series }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <p class="text-muted">
+                        <i class="fas fa-clock me-2"></i>
+                        <small>Added on: {{ movie.date_added }}</small>
+                    </p>
+
+                    {% if movie.video_link %}
+                    <div class="ratio ratio-16x9 mt-4">
+                        <iframe src="{{movie.video_link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    {% endif %}
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="{{ url_for('pages.edit_movie', movie_id=movie._id) }}" class="btn btn-primary">
+                            <i class="fas fa-edit me-2"></i>Edit
+                        </a>
+                        <form action="{{ url_for('pages.delete_movie', movie_id=movie._id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this movie?');">
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fas fa-trash-alt me-2"></i>Delete
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

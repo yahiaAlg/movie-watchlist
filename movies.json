@@ -1,0 +1,76 @@
+{
+  "movies": [
+    {
+      "title": "Dunkirk",
+      "director": "Christopher Nolan",
+      "year": "2022-07-20",
+      "_id": "3f33df7c-3bf7-4976-8542-5dcdc224babd",
+      "description": "During World War II, soldiers from the British Empire, Belgium and France try to evacuate from the town of Dunkirk during a arduous battle with German forces.",
+      "tags": [
+        "War",
+        "Action"
+      ],
+      "casts": [
+        "Tom Hardy",
+        "Cillian Murphy",
+        "Mark Rylance"
+      ],
+      "series": [
+        " "
+      ],
+      "date_added": "2024-08-21T20:00:51.200193",
+      "rating": 7.8,
+      "video_link": "https://www.youtube.com/watch?v=F-eMt3SrfFU"
+    },
+    {
+      "title": "Sunrise in Heaven",
+      "director": "Waymon Boone",
+      "year": "2019-04-09",
+      "_id": "a6a0f6e6-5760-4f97-b561-a0d1d3fa77fe",
+      "description": "After a car crash leaves her husband on life support, a young woman relies on their past moments of togetherness and her faith in God to cope with the situation",
+      "tags": [
+        "Romance",
+        "Drama"
+      ],
+      "casts": [
+        "Caylee Cowan",
+        "Travis Burns",
+        "Aitana Rinab"
+      ],
+      "series": [
+        " "
+      ],
+      "date_added": "2024-08-21T22:15:34.419958",
+      "rating": 5.7,
+      "video_link": "https://youtu.be/VeI6g_7gXQo?si=UztFNwCpKJSulD1c"
+    },
+    {
+      "title": " Kingdom of Heaven",
+      "director": "Ridley Scott",
+      "year": "2005-05-06",
+      "_id": "79d947bf-2025-4c59-a8ab-9b3ce1b8b509",
+      "description": "Aided by his advisor Tiberias, Crusader Balian learns the true meaning of knighthood. Enlightened, he seeks to establish peace between Jerusalem and the East engaged in the Holy War.",
+      "tags": [
+        "Adventure",
+        "War"
+      ],
+      "casts": [
+        "Orlando Bloom",
+        "Liam Neeson",
+        "Eva Green",
+        "Edward Norton",
+        "Jeremy Irons ",
+        "David Thewlis",
+        "Marton Csokas",
+        "Ghassan Massoud",
+        "Brendan Gleeson"
+      ],
+      "series": [
+        "[]"
+      ],
+      "date_added": "2024-08-21T22:16:46.044284",
+      "rating": 7.3,
+      "video_link": "https://youtu.be/KartNo8EDWY?si=e1yN8FHiczjuuzSh"
+    }
+  ]
+}
