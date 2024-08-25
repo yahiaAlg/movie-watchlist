@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h1 class="display-1 text-muted mb-4">
+                        <i class="fas fa-exclamation-triangle"></i> 404
+                    </h1>
+                    <h2 class="display-4 mb-4">Oops! Page Not Found</h2>
+                    <p class="lead mb-4">We couldn't find the page you're looking for. It might have been deleted or never existed.</p>
+                    <div class="mb-4">
+                        <i class="fas fa-search fa-5x text-muted"></i>
+                    </div>
+                    <p class="mb-4">Let's get you back on track:</p>
+                    <div class="d-grid gap-2 col-lg-6 mx-auto">
+                        <a href="{{ url_for('pages.home') }}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-home me-2"></i>Go to Homepage
+                        </a>
+                        <a href="{{ url_for('pages.add_movie') }}" class="btn btn-success btn-lg">
+                            <i class="fas fa-plus me-2"></i>Add a New Movie
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

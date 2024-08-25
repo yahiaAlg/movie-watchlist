@@ -19,6 +19,7 @@
         " "
       ],
       "date_added": "2024-08-21T20:00:51.200193",
+      "last_seen": "2024-08-22T12:09:38.447671",
       "rating": 7.8,
       "video_link": "https://www.youtube.com/watch?v=F-eMt3SrfFU"
     },
@@ -41,6 +42,7 @@
         " "
       ],
       "date_added": "2024-08-21T22:15:34.419958",
+      "last_seen": "2024-08-22T11:25:38.867353",
       "rating": 5.7,
       "video_link": "https://youtu.be/VeI6g_7gXQo?si=UztFNwCpKJSulD1c"
     },
@@ -69,8 +71,50 @@
         "[]"
       ],
       "date_added": "2024-08-21T22:16:46.044284",
+      "last_seen": "2024-08-22T11:25:38.867353",
       "rating": 7.3,
       "video_link": "https://youtu.be/KartNo8EDWY?si=e1yN8FHiczjuuzSh"
+    },
+    {
+      "title": " The Lord of the Rings",
+      "director": "Peter Jackson",
+      "year": "2001-12-19",
+      "_id": "47b5867a-47a6-4582-8c30-21d5a6b3c602",
+      "description": "The Lord of the Rings is a trilogy of epic fantasy adventure films directed by Peter Jackson, based on the novel The Lord of the Rings by British author J. R. R. Tolkien. The films are subtitled The Fellowship of the Ring, The Two Towers, and The Return of the King",
+      "tags": [
+        "Adventure",
+        "War"
+      ],
+      "casts": [
+        "Elijah Wood",
+        "Baggins Ian McKellen",
+        "Viggo Mortensen",
+        "Sean Astin",
+        "Gamgee Sean Bean",
+        "Orlando Bloom"
+      ],
+      "series": [
+        "The Fellowship of the Ring",
+        "The Two Towers",
+        "The Return of the King"
+      ],
+      "date_added": "2024-08-22T18:58:19.594274",
+      "last_seen": "2024-08-22T18:58:19.594274",
+      "rating": 8.8,
+      "video_link": "https://youtu.be/_nZdmwHrcnw?si=UndEMDn04TQSr328"
+    }
+  ],
+  "users": [
+    {
+      "email": "yahialinus@gmail.com",
+      "name": "yahia abderraouf",
+      "password": "yahia2001",
+      "id": "d9c30925-84e0-4077-ab3d-5a5fc9229f38",
+      "movie_ids": [
+        "47b5867a-47a6-4582-8c30-21d5a6b3c602",
+        "79d947bf-2025-4c59-a8ab-9b3ce1b8b509"
+      ],
+      "password_hash": "scrypt:32768:8:1$9Js2XbaKldNelpHQ$f8a02e428db05bc17cc78f1f6149c3c50e42e231aa4883cb07c49d6c38fda26ffe3fac999e9f5413b68d7a18675434bdbc017e4c2c426a805b9edbf465a0c046"
     }
   ]
 }

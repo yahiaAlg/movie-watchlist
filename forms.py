@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, DateField, FloatField
-from wtforms.validators import InputRequired, NumberRange, URL
+from wtforms import StringField, TextAreaField, DateField, FloatField, PasswordField, SubmitField
+from wtforms.validators import InputRequired, NumberRange, URL, DataRequired, Email, EqualTo, Length
 from wtforms.widgets import TextArea
 
 
@@ -19,3 +19,21 @@ class MovieForm(FlaskForm):
         URL()
     ])
     
+    
+class LoginForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Login')
+
+class RegistrationForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    name = StringField('Name', validators=[DataRequired(), Length(min=2, max=50)])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=6)])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Register')
+
+
+class EditProfileForm(FlaskForm):
+    name = StringField('Name', validators=[DataRequired(), Length(max=64)])
+    email = StringField('Email', validators=[DataRequired(), Length(max=120)])
+    submit = SubmitField('Update Profile')
