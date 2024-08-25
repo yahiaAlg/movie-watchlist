@@ -77,6 +77,7 @@ def movie_details(movie_id):
     if not movie:
         abort(404)
     movie = Movie(**movie[0])
+    print("last seen type:",type(movie.last_seen))
     movie.last_seen = datetime.datetime.fromisoformat(movie.last_seen).strftime("in %b %d at %H:%M")
     return render_template("pages/details.html", movie=movie)
 
@@ -130,9 +131,10 @@ def edit_movie(movie_id):
             casts=form.casts.data.split(",") if form.casts.data else [],
             series=form.series.data.split(",") if form.series.data else [],
             rating=form.rating.data,
-            video_link=form.video_link.data
+            video_link=form.video_link.data,
         )
-
+        updated_movie.last_seen = datetime.date.isoformat(updated_movie.last_seen)
+        print("last seen after editing ", type(updated_movie.last_seen))
         current_app.db.update("movies", lambda x: x["_id"] == movie_id, lambda x: x.update(asdict(updated_movie)))
         flash("Movie updated successfully", "success")
         return redirect(url_for("pages.home"))
