@@ -2,8 +2,8 @@ import uuid
 from flask import Flask
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-from .json_database_utility import JSONDatabaseUtility
-from .routes import pages, auth, register_error_handlers
+from json_database_utility import JSONDatabaseUtility
+from routes import pages, auth, register_error_handlers
 
 
 def create_app():

@@ -1,2 +1,2 @@
 FLASK_DEBUG=true
-FLASK_APP=__init__
+FLASK_APP=app

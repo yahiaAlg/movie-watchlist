@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for, request, flash, session, current_app, abort
-from .forms import LoginForm, RegistrationForm, MovieForm, EditProfileForm
-from .models import User, Movie
-from .decorators import login_required, redirect_if_logged_in, owner_required
+from forms import LoginForm, RegistrationForm, MovieForm, EditProfileForm
+from models import User, Movie
+from decorators import login_required, redirect_if_logged_in, owner_required
 import uuid
 import datetime
 from dataclasses import asdict
